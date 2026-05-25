@@ -1,9 +1,9 @@
 cask "dblitz" do
   arch arm: "aarch64", intel: "x64"
 
-  version "26.5.0"
-  sha256 arm:   "8df58400e451cd3f8de313cc1da82ae83ed0c010bba25470205070035723dbc1",
-         intel: "c3198977bbfbb544cb7ef33466df8c3f9e7153f50cac150d081042eb6bb5febb"
+  version "26.5.4"
+  sha256 arm:   "0668617f5d9558d5caefa2cd99651f440cc431438e251961638ad97d560c96b1",
+         intel: "b5d6ed8967f7d7a2f383fbb6b6fce8e5cb72d528e6df505f1c50939556d246d1"
 
   url "https://github.com/tstone-1/dblitz/releases/download/v#{version}/dblitz_#{version}_#{arch}.dmg"
   name "dblitz"
@@ -13,8 +13,8 @@ cask "dblitz" do
   app "dblitz.app"
 
   zap trash: [
-    "~/Library/Application Support/com.dblitz.app",
-    "~/Library/Preferences/com.dblitz.app.plist",
-    "~/Library/Saved Application State/com.dblitz.app.savedState",
+    "~/Library/Application Support/com.tstone.dblitz",
+    "~/Library/Preferences/com.tstone.dblitz.plist",
+    "~/Library/Saved Application State/com.tstone.dblitz.savedState",
   ]
 end
