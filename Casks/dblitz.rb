@@ -10,7 +10,19 @@ cask "dblitz" do
   desc "Fast read-only SQLite browser"
   homepage "https://github.com/tstone-1/dblitz"
 
+  depends_on :macos
+
   app "dblitz.app"
+
+  # The app is ad-hoc signed, not Apple-notarized, so Gatekeeper reports a
+  # quarantined copy as "damaged and can't be opened". Strip the quarantine
+  # flag Homebrew stamps on the install so it launches without that error.
+  # (Direct .dmg downloads from GitHub Releases still need a manual
+  # `xattr -dr com.apple.quarantine /Applications/dblitz.app`.)
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-dr", "com.apple.quarantine", "#{appdir}/dblitz.app"]
+  end
 
   zap trash: [
     "~/Library/Application Support/com.tstone.dblitz",
