@@ -1,9 +1,9 @@
 cask "dblitz" do
   arch arm: "aarch64", intel: "x64"
 
-  version "26.7.0"
-  sha256 arm:   "6516f03b6e1599f71cbab1fb4fde211f7bc9d969f2b25ded6c1ad6c4f45ee362",
-         intel: "cb76d240847ed2c9fd6f22a97e8cd2f206523abb9d9e1cf89e5ae2a0938e189b"
+  version "26.7.1"
+  sha256 arm:   "b09e896e9a609f0e68115232f240bb831814a4c82259759fd1ce47c3652f643a",
+         intel: "c1b0ac8f778094e8c61f6e8c1433f85a236a0c3a008e53e8fcbc447a5b900afb"
 
   url "https://github.com/tstone-1/dblitz/releases/download/v#{version}/dblitz_#{version}_#{arch}.dmg"
   name "dblitz"
