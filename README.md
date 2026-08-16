@@ -15,7 +15,7 @@ brew tap tstone-1/dblitz
 brew install --cask dblitz
 ```
 
-Homebrew strips the macOS quarantine attribute on cask installs, so the app opens normally — no `xattr` step needed.
+dblitz is signed with a Developer ID certificate and notarized by Apple, so it opens without an `xattr` step — from this tap or from a direct `.dmg` download.
 
 ## Update
 
