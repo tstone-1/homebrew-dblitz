@@ -7,7 +7,7 @@ cask "dblitz" do
 
   url "https://github.com/tstone-1/dblitz/releases/download/v#{version}/dblitz_#{version}_#{arch}.dmg"
   name "dblitz"
-  desc "Fast read-only SQLite browser"
+  desc "Read-only browser for SQLite, Parquet, CSV and JSON files"
   homepage "https://github.com/tstone-1/dblitz"
 
   # dblitz ships an in-app updater (Tauri, minisign-signed payloads), so the
